@@ -31,7 +31,7 @@
                         <li class="">
                             <div class="main-blue-button">
                                 <a href="confess">
-                                    {{ Auth::user()->username }}
+                                    Confess
                                 </a>
                             </div>
                         </li>
