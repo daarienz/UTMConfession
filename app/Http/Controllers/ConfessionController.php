@@ -3,22 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Confession;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Confession;
+use App\Models\User;
 
 class ConfessionController extends Controller
 {
+    public function confessPage(){
+        return view('confess');
+    }
+
     public function addAnonymousConfession(Request $request){
 
-        
+        $user = User::where('id', Auth::id())->first();
+        $confession = new Confession;
 
-        $confession = $request->confession;
         
         if(Auth::check()){
+            $confession->confession = $request->confession;
+            $confession->user_id = $user->id;
+            $confession->username = $user->username;
+            $confession->save();
+        }
+        else{
+            $confession->confession = $request->confession;
+            $confession->save();
         }
 
-        Confession::create($confession);
+        
 
-        return Redirect('profile')->with('profileUpdated', 'Profile updated successfully !');
+        return Redirect('home')->with('confessUploaded', 'Confession uploaded successfully !');
     }
 }

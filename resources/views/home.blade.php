@@ -48,8 +48,12 @@
                 </div>
             </div>
         </div>
+
+
         <div class="container-fluid">
             <div class="row">
+
+
                 <div class="col-lg-4">
                     <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="row">
@@ -68,6 +72,8 @@
                         <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
                     </div>
                 </div>
+
+
                 <div class="col-lg-4">
                     <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="row">
@@ -86,6 +92,208 @@
                         <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
                     </div>
                 </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon">
+                                    <img src="assets/images/service-icon-01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="right-content">
+                                    <h4>Username</h4>
+                                    <p>Confession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>

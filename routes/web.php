@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConfessionController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
@@ -28,10 +29,6 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/confess', function() {
-    return view('confess');
-});
-
 Route::get('/login', function() {
     return view('login');
 });
@@ -46,3 +43,6 @@ Route::middleware('auth')->group(function(){
 
 Route::post('register', [RegisterController::class, 'store']);
 Route::post('login', [LoginController::class, 'store']);
+
+Route::get('confess', [ConfessionController::class, 'confessPage']);
+Route::post('confess', [ConfessionController::class, 'addAnonymousConfession']);

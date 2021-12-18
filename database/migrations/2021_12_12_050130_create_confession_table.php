@@ -15,12 +15,12 @@ class CreateConfessionTable extends Migration
     {
         Schema::create('confession', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique()->nullable();
+            $table->string('username')->index()->nullable();
             $table->foreign('username')->references('username')->on('users');
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string('confession');
-            $table->integer('numberOfLikes');
-            $table->integer('numberOfDislikes');
+            $table->integer('numberOfLikes')->nullable();
+            $table->integer('numberOfDislikes')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

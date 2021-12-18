@@ -23,7 +23,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                    <form id="contact" action="" method="post">
+                    <form id="contact" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3">
                                 <div class="section-heading">
@@ -31,6 +32,7 @@
                                     <h2>Fill Out <span>Your</span> <em>Confession</em> Below</h2>
                                 </div>
                             </div>
+
                             <div class="col-lg-9">
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -51,6 +53,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-3">
                                 <div class="contact-info">
                                     <ul>
@@ -72,6 +75,7 @@
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
                     </form>
                 </div>
