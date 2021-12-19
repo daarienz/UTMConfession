@@ -22,8 +22,8 @@
                             </div>
                         </li>
                         @if((Auth::check()))
-                        <li class=""><a href="">My Confession</a></li>
-                        <li class=""><a href="">Profile</a></li>
+                        <li class=""><a href="userConfession">My Confession</a></li>
+                        <li class=""><a href="profile">Profile</a></li>
                         <li class="">
                             <form method="POST" action="{{route('logout')}}">
                                 @csrf

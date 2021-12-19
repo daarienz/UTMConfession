@@ -37,6 +37,18 @@ Route::get('/register', function() {
     return view('register');
 });
 
+Route::get('/userConfession', function() {
+    return view('userConfession');
+});
+
+Route::get('/profile', function() {
+    return view('profile');
+});
+
+Route::get('/editProfile', function() {
+    return view('editProfile');
+});
+
 Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });

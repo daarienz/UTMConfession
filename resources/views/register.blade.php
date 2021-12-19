@@ -41,7 +41,7 @@
                                 <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-input" name="description" id="description" placeholder="Description" required />
+                                <input type="text" class="form-input" name="description" id="description" placeholder="Status" required />
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>
