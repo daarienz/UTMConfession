@@ -14,7 +14,7 @@
                         <li class=""><a href="{{url('home')}}" class="active">Home</a></li>
                         <li class=""><a href="{{url('about')}}">About Us</a></li>
                         <li class="scroll-to-section">
-                            <button class="dropbtn">Sort</button>
+                            <button class="dropbtn" style="font-weight: 500; position:relative; bottom: -2px;">Sort</button>
                             <div class="dropdown-content">
                                 <a href="home">Most Comments</a>
                                 <a href="home">Most Liked</a>
@@ -22,6 +22,8 @@
                             </div>
                         </li>
                         @if((Auth::check()))
+                        <li class=""><a href="">My Confession</a></li>
+                        <li class=""><a href="">Profile</a></li>
                         <li class="">
                             <form method="POST" action="{{route('logout')}}">
                                 @csrf
@@ -31,7 +33,7 @@
                         <li class="">
                             <div class="main-blue-button">
                                 <a href="confess">
-                                    Confess
+                                    Confess as {{ Auth::user()->username }}
                                 </a>
                             </div>
                         </li>

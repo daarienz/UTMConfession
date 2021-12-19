@@ -26,6 +26,8 @@
                     <form id="contact" method="post">
                         @csrf
                         <div class="row">
+
+
                             <div class="col-lg-6 offset-lg-3">
                                 <div class="section-heading">
                                     <h6>Confession</h6>
@@ -33,6 +35,7 @@
                                 </div>
                             </div>
 
+                            
                             <div class="col-lg-9">
                                 <div class="row">
                                     <div class="col-lg-12">
