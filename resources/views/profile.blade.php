@@ -26,76 +26,93 @@
                 <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
                     <form id="contact" method="post">
                         @csrf
-
-
                         <div class="row">
 
-
+                            <!-- Avatar and Change Avatar Div -->
                             <div class="col-md-4">
                                 <div class="profile-img">
                                     <div class="section-headings">
                                         <h2><span>My</span><em> Profile</em></h2> <br>
                                         <img style="border-radius: 50%;" src="https://i.ibb.co/XDvNnq4/IU-Photos-107-of-599-Last-fm.webp" alt="" /> <br> <br> <br> <br>
-                                        <div class="file btn btn-lg btn-primary">
-                                            Change Avatar
-                                            <input type="file" name="file" />
-                                        </div>
+                                        <button style="text-decoration: none;" class="profile-edit-btn">Change Avatar</button>
                                     </div>
                                 </div>
                             </div>
 
-
-
-
+                            <!-- Display information div -->
                             <div class="col-md-6">
                                 <div class="profile-head">
                                     <div class="section-headings">
-                                    <h2>{{ Auth::user()->username }}</h2>
-                                    <h6>{{ Auth::user()->description }}</h6> <br>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label><b>Username :</b></label>
+                                        <h2>{{ Auth::user()->username }}</h2>
+                                        <h6>{{ Auth::user()->description }}</h6> <br>
+
+                                        <!-- Username information div -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><b>Username :</b></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ Auth::user()->username }}</p>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <p>{{ Auth::user()->username }}</p>
+
+                                        <!-- Email information div -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><b>Email :</b></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ Auth::user()->email }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label><b>Email :</b></label>
+
+                                        <!-- Status information div -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><b>Status :</b></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ Auth::user()->description }}</p>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <p>{{ Auth::user()->email }}</p>
+                                        
+                                        <!-- Password information div -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><b>Password :</b></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>&#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label><b>Status :</b></label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>{{ Auth::user()->description }}</p>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- End of form div -->
 
-
-
-
-
+                            <!-- Submit button -->
                             <div class="col-md-2">
-                                <a style="text-decoration: none;" href="editProfile" class="profile-edit-btn" name="btnAddMore">Edit</a><br>
+                                <a style="text-decoration: none;" href="editProfile" class="profile-edit-btn" name="btnAddMore">Edit Profile</a><br>
                             </div>
-
-
-
+                            <!-- End of submit button -->
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    @if(Session::has('profileUpdated'))
+    <script>
+        alert('Profile updated successfully !');
+    </script>
+    @endif
+
+    @if(Session::has('passwordChanged'))
+    <script>
+        alert('Password changed successfully !');
+    </script>
+    @endif
 </body>
 
 </html>

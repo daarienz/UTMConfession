@@ -16,7 +16,7 @@ class CreateConfessionTable extends Migration
         Schema::create('confession', function (Blueprint $table) {
             $table->id();
             $table->string('username')->index()->nullable();
-            $table->foreign('username')->references('username')->on('users');
+            $table->foreign('username')->references('username')->on('users')->onUpdate('cascade');
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string('confession');
             $table->integer('numberOfLikes')->nullable();

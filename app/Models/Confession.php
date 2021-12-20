@@ -10,4 +10,5 @@ class Confession extends Model
     use HasFactory;
 
     public $table = "confession";
+    protected $fillable = ['username'];
 }

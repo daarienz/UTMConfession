@@ -4,6 +4,8 @@ use App\Http\Controllers\ConfessionController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,10 +47,6 @@ Route::get('/profile', function() {
     return view('profile');
 });
 
-Route::get('/editProfile', function() {
-    return view('editProfile');
-});
-
 Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });
@@ -58,3 +56,7 @@ Route::post('login', [LoginController::class, 'store']);
 
 Route::get('confess', [ConfessionController::class, 'confessPage']);
 Route::post('confess', [ConfessionController::class, 'addAnonymousConfession']);
+
+Route::get('editProfile', [UserController::class, 'updateProfileView']);
+Route::post('updateProfile', [UserController::class, 'updateProfile']);
+Route::post('changePassword', [UserController::class, 'changePassword']);
