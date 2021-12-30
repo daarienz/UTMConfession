@@ -6,6 +6,7 @@
 
     <link href="{{url('https://fonts.gstatic.com')}}" rel="preconnect">
     <link href="{{url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')}}" rel="stylesheet">
+    <link href="{{url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('/assets/css/fontawesome.css')}}" rel="stylesheet">
     <link href="{{asset('/assets/css/templatemo-seo-dream.css')}}" rel="stylesheet">
     <link href="{{asset('/assets/css/animated.css')}}" rel="stylesheet">
@@ -20,17 +21,18 @@
 
 <body>
     <style>
-        #fass {
-            cursor: pointer;
+        .fa {
+            font-size: 30px;
             transition: 0.3s;
-            background-color: white;
+            cursor: pointer;
+            user-select: none;
             color: rgb(51, 204, 197);
             border-color: rgb(51, 204, 197);
             padding: 10px;
             border-radius: 10px;
         }
 
-        #fass:hover {
+        .fa:hover {     
             color: rgb(71, 113, 203);
             border-radius: 30px;
             border-color: rgb(71, 113, 203);
@@ -53,7 +55,7 @@
         <div class="container-fluid">
             <div class="row">
 
-
+                @foreach($confession as $confessions)
                 <div class="col-lg-4">
                     <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="row">
@@ -64,235 +66,23 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
+                                    <h4>
+                                        @if($confessions->username != NULL)
+                                        {{ $confessions->username }}
+                                        @else
+                                        <mark>Anonymous</mark>
+                                        @endif
+                                    </h4>
+                                    <p>{{ $confessions->confession }}</p>
+                                    <p>Date: {{ $confessions->created_at }}</p>
                                 </div>
                             </div>
                         </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-up">{{ $confessions->numberOfLikes }}</i>
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-down">{{ $confessions->numberOfDislikes }}</i>
                     </div>
                 </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Username</h4>
-                                    <p>Confession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class='far fa-hand-point-up' style='font-size:36px;' id="fass">Like</button>
-                    </div>
-                </div>
-
+                @endforeach
 
             </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConfessionController;
+use App\Http\Controllers\ConfessionListController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
@@ -23,10 +24,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', function() {
-    return view('home');
-});
-
 Route::get('/about', function() {
     return view('about');
 });
@@ -39,10 +36,6 @@ Route::get('/register', function() {
     return view('register');
 });
 
-Route::get('/userConfession', function() {
-    return view('userConfession');
-});
-
 Route::get('/profile', function() {
     return view('profile');
 });
@@ -51,12 +44,18 @@ Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });
 
+Route::get('home', [ConfessionListController::class, 'generalConfession']);
+Route::get('mostComments', [ConfessionListController::class, 'generalConfession']);
+Route::get('mostLiked', [ConfessionListController::class, 'mostLiked']);
+Route::get('userConfession', [ConfessionListController::class, 'authConfession']);
+
+Route::post('updateProfile', [UserController::class, 'updateProfile']);
+Route::post('changePassword', [UserController::class, 'changePassword']);
+Route::get('editProfile', [UserController::class, 'updateProfileView']);
+
 Route::post('register', [RegisterController::class, 'store']);
+
 Route::post('login', [LoginController::class, 'store']);
 
 Route::get('confess', [ConfessionController::class, 'confessPage']);
 Route::post('confess', [ConfessionController::class, 'addAnonymousConfession']);
-
-Route::get('editProfile', [UserController::class, 'updateProfileView']);
-Route::post('updateProfile', [UserController::class, 'updateProfile']);
-Route::post('changePassword', [UserController::class, 'changePassword']);

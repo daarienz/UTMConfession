@@ -16,8 +16,8 @@
                         <li class="scroll-to-section">
                             <button class="dropbtn" style="font-weight: 500; position:relative; bottom: -2px;">Sort</button>
                             <div class="dropdown-content">
-                                <a href="home">Most Comments</a>
-                                <a href="home">Most Liked</a>
+                                <a href="mostComments">Most Comments</a>
+                                <a href="mostLiked">Most Liked</a>
                                 <a href="home">Date</a>
                             </div>
                         </li>
