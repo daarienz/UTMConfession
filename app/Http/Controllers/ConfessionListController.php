@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Confession;
+use App\Models\User;
 
 class ConfessionListController extends Controller
 {
@@ -12,7 +13,7 @@ class ConfessionListController extends Controller
         $confession = Confession::all()->sortByDesc('created_at');
 
         return view("home", [
-            "confession" => $confession
+            "confession" => $confession,
         ]);
     }
 

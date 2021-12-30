@@ -32,9 +32,8 @@
                             <div class="col-md-4">
                                 <div class="profile-img">
                                     <div class="section-headings">
-                                        <h2><span>My</span><em> Profile</em></h2> <br>
+                                        <h2><span>Change</span><em> Avatar</em></h2> <br>
                                         <img style="border-radius: 50%;" src="https://i.ibb.co/XDvNnq4/IU-Photos-107-of-599-Last-fm.webp" alt="" /> <br> <br> <br> <br>
-                                        <a style="text-decoration: none;" class="profile-edit-btn" href="changeAvatar">Change Avatar</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,29 +89,22 @@
                             </div>
                             <!-- End of form div -->
 
-                            <!-- Submit button -->
+                            <!-- Back button -->
                             <div class="col-md-2">
-                                <a style="text-decoration: none;" href="editProfile" class="profile-edit-btn" name="btnAddMore">Edit Profile</a><br>
+                                <a style="text-decoration: none;" href="profile" class="profile-edit-btn" name="btnAddMore">Back</a><br>
                             </div>
-                            <!-- End of submit button -->
+                            <!-- End of back button -->
+
+                            <!-- Submit form button -->
+                            <div>
+                                <button type="submit" style="text-decoration: none;" class="profile-edit-btn">Submit</button><br>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    @if(Session::has('profileUpdated'))
-    <script>
-        alert('Profile updated successfully !');
-    </script>
-    @endif
-
-    @if(Session::has('passwordChanged'))
-    <script>
-        alert('Password changed successfully !');
-    </script>
-    @endif
 </body>
 
 </html>

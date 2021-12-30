@@ -40,6 +40,10 @@ Route::get('/profile', function() {
     return view('profile');
 });
 
+Route::get('/changeAvatar', function() {
+    return view('changeAvatar');
+});
+
 Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });
