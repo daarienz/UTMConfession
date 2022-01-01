@@ -37,6 +37,13 @@ class ConfessionListController extends Controller
         ]);
     }
 
+    public function like(Request $request){
+        $confession = Confession::where('user_id', Auth::id())->get();
+
+        $confession->numberOfLikes = $request->like;
+        $confession->save();
+    }
+
     public function deleteConfession(){
 
     }

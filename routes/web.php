@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/about', function() {
     return view('about');
@@ -47,6 +47,8 @@ Route::get('/changeAvatar', function() {
 Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });
+
+Route::get('/', [ConfessionListController::class, 'generalConfession']);
 
 Route::get('home', [ConfessionListController::class, 'generalConfession']);
 Route::get('mostComments', [ConfessionListController::class, 'generalConfession']);

@@ -78,8 +78,14 @@
                                 </div>
                             </div>
                         </div>
-                        <i onclick="myFunction(this)" class="fa fa-thumbs-up">{{ $confessions->numberOfLikes }}</i>
-                        <i onclick="myFunction(this)" class="fa fa-thumbs-down">{{ $confessions->numberOfDislikes }}</i>
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="like">{{ $confessions->numberOfLikes }}</i>
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-down" name="dislike">{{ $confessions->numberOfDislikes }}</i>
+
+                        <script>
+                            function myFunction(x) {
+                                
+                            }
+                        </script>
                     </div>
                 </div>
                 @endforeach
