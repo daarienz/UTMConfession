@@ -21,13 +21,13 @@ class ConfessionListController extends Controller
         return view("home");
     }
 
-    public function mostLiked(){
-        $confession = Confession::all()->sortByDesc('numberOfLikes');
+    // public function mostLiked(){
+    //     $confession = Confession::all()->sortByDesc('numberOfLikes');
 
-        return view("home", [
-            "confession" => $confession
-        ]);
-    }
+    //     return view("home", [
+    //         "confession" => $confession
+    //     ]);
+    // }
 
     public function authConfession(){
         $confession = Confession::where('user_id', Auth::id())->orderBy('created_at', 'desc')->get();
