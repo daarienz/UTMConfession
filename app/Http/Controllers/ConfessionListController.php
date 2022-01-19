@@ -9,13 +9,13 @@ use App\Models\User;
 
 class ConfessionListController extends Controller
 {
-    public function generalConfession(){
-        $confession = Confession::all()->sortByDesc('created_at');
+    // public function generalConfession(){
+    //     $confession = Confession::all()->sortByDesc('created_at');
 
-        return view("home", [
-            "confession" => $confession,
-        ]);
-    }
+    //     return view("home", [
+    //         "confession" => $confession,
+    //     ]);
+    // }
 
     public function mostComments(){
         return view("home");
