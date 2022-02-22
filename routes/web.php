@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/about', function() {
     return view('about');
@@ -48,11 +48,12 @@ Route::middleware('auth')->group(function(){
     Route::post('logout', LogoutController::class)->name('logout');
 });
 
-// Route::get('/', [ConfessionListController::class, 'generalConfession']);
+Route::get('/', [ConfessionListController::class, 'generalConfession']);
 
 Route::get('home', [ConfessionListController::class, 'generalConfession']);
 Route::get('mostComments', [ConfessionListController::class, 'generalConfession']);
 Route::get('mostLiked', [ConfessionListController::class, 'mostLiked']);
+Route::get('mostDisliked', [ConfessionListController::class, 'mostDisliked']);
 Route::get('userConfession', [ConfessionListController::class, 'authConfession']);
 
 Route::post('updateProfile', [UserController::class, 'updateProfile']);

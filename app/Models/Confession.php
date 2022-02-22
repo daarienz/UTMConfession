@@ -9,6 +9,11 @@ class Confession extends Model
 {
     use HasFactory;
 
-    public $table = "confession";
+    public $table = "confessions";
     protected $fillable = ['username'];
+
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
+    }
 }

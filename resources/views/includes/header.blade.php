@@ -18,6 +18,7 @@
                             <div class="dropdown-content">
                                 <a href="mostComments">Most Comments</a>
                                 <a href="mostLiked">Most Liked</a>
+                                <a href="mostDisliked">Most Disliked</a>
                                 <a href="home">Date</a>
                             </div>
                         </li>

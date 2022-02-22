@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConfessionTable extends Migration
+class CreateConfessionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateConfessionTable extends Migration
      */
     public function up()
     {
-        Schema::create('confession', function (Blueprint $table) {
+        Schema::create('confessions', function (Blueprint $table) {
             $table->id();
             $table->string('username')->index()->nullable();
             $table->foreign('username')->references('username')->on('users')->onUpdate('cascade');
@@ -21,8 +21,6 @@ class CreateConfessionTable extends Migration
             $table->string('confession');
             $table->integer('numberOfLikes')->nullable();
             $table->integer('numberOfDislikes')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateConfessionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('confession');
+        Schema::dropIfExists('confessions');
     }
 }

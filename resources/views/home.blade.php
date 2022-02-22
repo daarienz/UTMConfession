@@ -78,14 +78,22 @@
                                 </div>
                             </div>
                         </div>
-                        <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="like">{{ $confessions->numberOfLikes }}</i>
+                        @if($confessions->numberOfLikes != NULL)
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="like">{{$confessions->numberOfLikes}}</i>
+                        @else
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="like">0</i>
+                        @endif
+                        @if($confessions->numberOfDislikes != NULL)
                         <i onclick="myFunction(this)" class="fa fa-thumbs-down" name="dislike">{{ $confessions->numberOfDislikes }}</i>
-
-                        <script>
+                        @else
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-down" name="dislike">0</i>
+                        @endif
+                        
+                        <!-- <script>
                             function myFunction(x) {
                                 
                             }
-                        </script>
+                        </script> -->
                     </div>
                 </div>
                 @endforeach
