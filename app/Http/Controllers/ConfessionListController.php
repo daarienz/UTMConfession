@@ -9,25 +9,25 @@ use App\Models\User;
 
 class ConfessionListController extends Controller
 {
-    // public function generalConfession(){
-    //     $confession = Confession::all()->sortByDesc('created_at');
+    public function generalConfession(){
+        $confession = Confession::all()->sortByDesc('created_at');
 
-    //     return view("home", [
-    //         "confession" => $confession,
-    //     ]);
-    // }
+        return view("home", [
+            "confession" => $confession,
+        ]);
+    }
 
     public function mostComments(){
         return view("home");
     }
 
-    // public function mostLiked(){
-    //     $confession = Confession::all()->sortByDesc('numberOfLikes');
+    public function mostLiked(){
+        $confession = Confession::all()->sortByDesc('numberOfLikes');
 
-    //     return view("home", [
-    //         "confession" => $confession
-    //     ]);
-    // }
+        return view("home", [
+            "confession" => $confession
+        ]);
+    }
 
     public function authConfession(){
         $confession = Confession::where('user_id', Auth::id())->orderBy('created_at', 'desc')->get();
